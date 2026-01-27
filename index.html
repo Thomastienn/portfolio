@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Vu | Software Developer</title>
+    <meta name="description" content="CS student at University of Calgary. Building compilers, ML systems, and developer tools. Research in NLP and software engineering.">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Thomas Vu | Software Developer">
+    <meta property="og:description" content="CS student at University of Calgary. Building compilers, ML systems, and developer tools.">
+    <meta property="og:url" content="https://thomastienn.github.io/portfolio">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Thomas Vu | Software Developer">
+    <meta name="twitter:description" content="CS student at University of Calgary. Building compilers, ML systems, and developer tools.">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">TV</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-greeting">Hi, I'm</p>
+                <h1 class="hero-name">Thomas Vu</h1>
+                <p class="hero-tagline">Building compilers, ML systems, and winning contests</p>
+                <p class="hero-description">
+                    Second-year CS student at the University of Calgary. I build developer tools, conduct NLP research, and compete in programming contests.
+                </p>
+                <div class="hero-links">
+                    <a href="https://github.com/Thomastienn" target="_blank" class="link-btn">GitHub</a>
+                    <a href="https://linkedin.com/in/tienthomasvu" target="_blank" class="link-btn">LinkedIn</a>
+                    <a href="resume.pdf" download class="link-btn">Resume</a>
+                    <a href="mailto:thomastien123@gmail.com" class="link-btn link-btn-primary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="section-title">About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a second-year Computer Science student at the <strong>University of Calgary</strong>, 
+                        maintaining a 3.7 GPA and recognized on the Dean's List for academic excellence.
+                    </p>
+                    <p>
+                        My interests span from building developer tools and transpilers to conducting research 
+                        in machine learning and NLP. I enjoy solving complex problems and shipping products 
+                        that people can actually use.
+                    </p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <p>Python, C++, TypeScript, Java, SQL, Bash</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks</h3>
+                        <p>React, Next.js, FastAPI, LangGraph, PyTorch</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools</h3>
+                        <p>Docker, AWS, Git, spaCy, Transformers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Undergraduate Researcher</h3>
+                            <span class="timeline-date">Oct 2025 — Present</span>
+                        </div>
+                        <p class="timeline-company">University of Calgary · Machine Learning & NLP</p>
+                        <ul class="timeline-details">
+                            <li>Built NLP pipelines to assess text complexity in German literature using Transformers, GPT, and spaCy</li>
+                            <li>Used PCA and t-SNE to visualize feature space and explore clustering with KNN</li>
+                            <li>Built a self-supervised contrastive model reaching 88% pairwise accuracy on ~50k sentences</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Undergraduate Researcher</h3>
+                            <span class="timeline-date">May 2025 — Aug 2025</span>
+                        </div>
+                        <p class="timeline-company">Vision Research Lab, University of Calgary · Software Engineering</p>
+                        <ul class="timeline-details">
+                            <li>Built an automated PPT generator from documents with an integrated chatbot; shipped full web frontend and backend</li>
+                            <li>Dockerized services and built serverless Python apps on AWS Lambda; optimized ffmpeg pipelines from ~30 min to ≤1 min</li>
+                            <li>Implemented LangGraph-based chatbot controller with React/TypeScript frontend</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Py2Cpp</h3>
+                        <div class="project-links">
+                            <a href="https://python2cpp.vercel.app" target="_blank">Live</a>
+                            <a href="https://github.com/Thomastienn/python2cpp" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Python to C++ transpiler for competitive programming. Converts import-free Python to readable C++ 
+                        with focus on correctness and clarity.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>AST traversal using Python's ast module for syntax and semantic analysis</li>
+                        <li>Lightweight type inference to catch undefined variables and type mismatches</li>
+                        <li>LLM fallback for edge cases; secure CLI with validation and rate limiting</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>AST</span>
+                        <span>FastAPI</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Docker</span>
+                        <span>Gemini API</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3>Algebra Solver</h3>
+                        <div class="project-links">
+                            <a href="https://algebra-solver-nine.vercel.app" target="_blank">Live</a>
+                            <a href="https://github.com/Thomastienn/algebra-solver" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Symbolic algebra system built from scratch in C++. Solves systems of linear equations 
+                        with step-by-step derivations.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Custom tokenizer and parser to build expression trees for evaluation</li>
+                        <li>Graph-based dependency resolution using priority queues</li>
+                        <li>C++ core exposed via Python bindings for web integration</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>C++</span>
+                        <span>CMake</span>
+                        <span>pybind11</span>
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Docker</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <h2 class="section-title">Research</h2>
+            <div class="research-grid">
+                <article class="research-card">
+                    <div class="research-header">
+                        <span class="research-type">Software Engineering Research</span>
+                    </div>
+                    <h3>SmartSuite</h3>
+                    <p class="research-org">Vision Research Lab, University of Calgary</p>
+                    <p class="research-description">
+                        A suite of AI-driven office tools deployed on AWS. Features intelligent document processing, 
+                        presentation generation, and conversational AI with LangGraph-based agents.
+                    </p>
+                    <ul class="research-highlights">
+                        <li>Document-to-presentation pipeline with multi-step agentic workflow</li>
+                        <li>Microservices on AWS Lambda: TTS, image generation, RAG retrieval</li>
+                        <li>LanceDB vector search for semantic document retrieval</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>AWS Lambda</span>
+                        <span>AWS CDK</span>
+                        <span>DynamoDB</span>
+                        <span>S3</span>
+                        <span>Docker</span>
+                        <span>LangGraph</span>
+                        <span>LanceDB</span>
+                        <span>OpenAI</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                    </div>
+                </article>
+
+                <article class="research-card">
+                    <div class="research-header">
+                        <span class="research-type">NLP Research</span>
+                    </div>
+                    <h3>Text Complexity Scoring</h3>
+                    <p class="research-org">University of Calgary</p>
+                    <p class="research-description">
+                        Self-supervised methods for scoring text complexity in German sentences. 
+                        Developing unsupervised ranking models without requiring manual labels.
+                    </p>
+                    <ul class="research-highlights">
+                        <li>38 linguistic features: lexical, syntactic, POS ratios, GPT-2 perplexity</li>
+                        <li>Contrastive learning with feature-direction priors and curriculum training</li>
+                        <li>Achieved 88% pairwise accuracy with 0.91 Spearman correlation</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>PyTorch</span>
+                        <span>Transformers</span>
+                        <span>spaCy</span>
+                        <span>BERT</span>
+                        <span>GPT-2</span>
+                        <span>scikit-learn</span>
+                        <span>NumPy</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="awards" class="section">
+            <h2 class="section-title">Awards</h2>
+            <div class="awards-list">
+                <div class="award-item">
+                    <div class="award-info">
+                        <h3>Calgary Collegiate Programming Contest 2025</h3>
+                        <p>Division 2 — Third Place</p>
+                    </div>
+                    <span class="award-date">March 2025</span>
+                </div>
+                <div class="award-item">
+                    <div class="award-info">
+                        <h3>Calgary First Year Contest 2025</h3>
+                        <p>Winner</p>
+                    </div>
+                    <span class="award-date">February 2025</span>
+                </div>
+                <div class="award-item">
+                    <div class="award-info">
+                        <h3>Dean's List</h3>
+                        <p>Academic Excellence 2024-2025</p>
+                    </div>
+                    <span class="award-date">2024-2025</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-contact">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-text">
+                I'm always open to discussing new opportunities, collaborations, or just chatting about interesting problems.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:thomastien123@gmail.com" class="contact-link">
+                    <span class="contact-label">Email</span>
+                    <span>thomastien123@gmail.com</span>
+                </a>
+                <a href="https://github.com/Thomastienn" target="_blank" class="contact-link">
+                    <span class="contact-label">GitHub</span>
+                    <span>github.com/Thomastienn</span>
+                </a>
+                <a href="https://linkedin.com/in/tienthomasvu" target="_blank" class="contact-link">
+                    <span class="contact-label">LinkedIn</span>
+                    <span>linkedin.com/in/tienthomasvu</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Thomas Vu · Calgary, AB</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
