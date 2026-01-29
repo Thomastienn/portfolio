@@ -67,3 +67,16 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Clickable project cards
+document.querySelectorAll('.project-card[data-href]').forEach(card => {
+    card.addEventListener('click', (e) => {
+        // Don't navigate if clicking on a link inside the card
+        if (e.target.tagName === 'A') return;
+        
+        const href = card.getAttribute('data-href');
+        if (href) {
+            window.location.href = href;
+        }
+    });
+});

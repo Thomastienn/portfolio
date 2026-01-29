@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra Solver | Thomas Vu</title>
+    <meta name="description" content="Algebra Solver - A symbolic algebra system built in C++ that solves systems of linear equations with step-by-step solutions.">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Algebra Solver | Thomas Vu">
+    <meta property="og:description" content="Symbolic algebra system with step-by-step equation solving.">
+    <meta property="og:url" content="https://thomastienn.github.io/portfolio/projects/algebra-solver">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../index.html" class="nav-logo">TV</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+                <h1>Algebra Solver</h1>
+                <p class="project-detail-tagline">Symbolic Algebra System in C++</p>
+                <div class="project-detail-links">
+                    <a href="https://algebra-solver-nine.vercel.app" target="_blank" class="link-btn link-btn-primary">Live Demo</a>
+                    <a href="https://github.com/Thomastienn/algebra-solver" target="_blank" class="link-btn">View Code</a>
+                </div>
+            </header>
+
+            <section class="project-detail-demo">
+                <h2>Demo</h2>
+                <div class="video-container">
+                    <video controls playsinline>
+                        <source src="../assets/videos/algebra-solver-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Overview</h2>
+                <p>
+                    A computer algebra system that solves systems of linear equations and shows the 
+                    step-by-step work. I built this to learn about parsing, expression trees, and 
+                    symbolic computation.
+                </p>
+                <p>
+                    Given a set of equations and a target variable, it substitutes known values, 
+                    simplifies expressions, and isolates the variable to find the solution.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>How It Works</h2>
+                <ul class="feature-list">
+                    <li>
+                        <strong>Lexer</strong>
+                        <p>Tokenizes input strings into numbers, variables, and operators.</p>
+                    </li>
+                    <li>
+                        <strong>Parser</strong>
+                        <p>Builds an expression tree using Pratt parsing (operator precedence). Handles binary operations, unary minus, and parentheses.</p>
+                    </li>
+                    <li>
+                        <strong>Simplifier</strong>
+                        <p>Reduces expressions by folding constants, combining like terms, and distributing multiplication.</p>
+                    </li>
+                    <li>
+                        <strong>Solver</strong>
+                        <p>Uses a priority queue to process equations. Equations with fewer unknowns get solved first, then their values are substituted into remaining equations.</p>
+                    </li>
+                    <li>
+                        <strong>Isolator</strong>
+                        <p>Rearranges an equation to get the target variable alone on one side.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Architecture</h2>
+                <div class="tech-details">
+                    <div class="tech-detail-item">
+                        <h3>Core Engine</h3>
+                        <p>Written in C++17. AST nodes represent atoms (numbers, variables) and operations. The solver, simplifier, and isolator operate on these trees.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Python Bindings</h3>
+                        <p>pybind11 exposes the C++ functions to Python: simplify(), isolate(), solve(). This lets the web backend call the engine directly.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Backend</h3>
+                        <p>FastAPI server with endpoints for /simplify and /solve-system. Imports the compiled C++ module.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Frontend</h3>
+                        <p>React app where you enter equations and see the solution steps.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Limitations</h2>
+                <p>
+                    Only handles linear equations. No quadratics, polynomials, or transcendental 
+                    functions. Doesn't support inequalities.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Technology Stack</h2>
+                <div class="project-tech">
+                    <span>C++17</span>
+                    <span>CMake</span>
+                    <span>pybind11</span>
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>React</span>
+                    <span>TypeScript</span>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Thomas Vu</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

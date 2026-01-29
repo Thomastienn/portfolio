@@ -29,8 +29,8 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -41,9 +41,9 @@
             <div class="hero-content">
                 <p class="hero-greeting">Hi, I'm</p>
                 <h1 class="hero-name">Thomas Vu</h1>
-                <p class="hero-tagline">Developer tools, ML research, and competitive programming</p>
+                <p class="hero-tagline">Developer tools, ML research, and problem solving</p>
                 <p class="hero-description">
-                    Second-year CS student at the University of Calgary. I build developer tools, conduct NLP research, and compete in programming contests.
+                    Second-year CS student at the University of Calgary. I build developer tools, conduct NLP research, and like solving problems in my free time.
                 </p>
                 <div class="hero-links">
                     <a href="https://github.com/Thomastienn" target="_blank" class="link-btn">GitHub</a>
@@ -121,68 +121,6 @@
             </div>
         </section>
 
-        <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>Py2Cpp</h3>
-                        <div class="project-links">
-                            <a href="https://python2cpp.vercel.app" target="_blank">Live</a>
-                            <a href="https://github.com/Thomastienn/python2cpp" target="_blank">Code</a>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Python to C++ transpiler for competitive programming. Converts import-free Python to readable C++ 
-                        with focus on correctness and clarity.
-                    </p>
-                    <ul class="project-highlights">
-                        <li>AST traversal using Python's ast module for syntax and semantic analysis</li>
-                        <li>Lightweight type inference to catch undefined variables and type mismatches</li>
-                        <li>LLM fallback for edge cases; secure CLI with validation and rate limiting</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>AST</span>
-                        <span>FastAPI</span>
-                        <span>React</span>
-                        <span>TypeScript</span>
-                        <span>Docker</span>
-                        <span>Gemini API</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <h3>Algebra Solver</h3>
-                        <div class="project-links">
-                            <a href="https://algebra-solver-nine.vercel.app" target="_blank">Live</a>
-                            <a href="https://github.com/Thomastienn/algebra-solver" target="_blank">Code</a>
-                        </div>
-                    </div>
-                    <p class="project-description">
-                        Symbolic algebra system built from scratch in C++. Solves systems of linear equations 
-                        with step-by-step derivations.
-                    </p>
-                    <ul class="project-highlights">
-                        <li>Custom tokenizer and parser to build expression trees for evaluation</li>
-                        <li>Graph-based dependency resolution using priority queues</li>
-                        <li>C++ core exposed via Python bindings for web integration</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>C++</span>
-                        <span>CMake</span>
-                        <span>pybind11</span>
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>React</span>
-                        <span>TypeScript</span>
-                        <span>Docker</span>
-                    </div>
-                </article>
-            </div>
-        </section>
-
         <section id="research" class="section">
             <h2 class="section-title">Research</h2>
             <div class="research-grid">
@@ -240,6 +178,63 @@
                         <span>GPT-2</span>
                         <span>scikit-learn</span>
                         <span>NumPy</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card" data-href="projects/py2cpp.html">
+                    <div class="project-header">
+                        <h3>Py2Cpp</h3>
+                        <div class="project-links">
+                            <a href="https://python2cpp.vercel.app" target="_blank">Live</a>
+                            <a href="https://github.com/Thomastienn/python2cpp" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Python to C++ transpiler for competitive programming. Parses Python into an AST, 
+                        infers types, and generates equivalent C++ code.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>AST-based parsing with type inference for variable declarations</li>
+                        <li>Translates common Python patterns: loops, list ops, built-in functions</li>
+                        <li>Web interface with Monaco Editor, plus CLI support</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>AST</span>
+                        <span>FastAPI</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                    </div>
+                </article>
+
+                <article class="project-card" data-href="projects/algebra-solver.html">
+                    <div class="project-header">
+                        <h3>Algebra Solver</h3>
+                        <div class="project-links">
+                            <a href="https://algebra-solver-nine.vercel.app" target="_blank">Live</a>
+                            <a href="https://github.com/Thomastienn/algebra-solver" target="_blank">Code</a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Symbolic algebra system that solves systems of linear equations. 
+                        Built from scratch in C++ with a web frontend.
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Custom lexer and parser building expression trees</li>
+                        <li>Simplification, substitution, and variable isolation</li>
+                        <li>C++ core exposed to Python via pybind11</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>C++</span>
+                        <span>CMake</span>
+                        <span>pybind11</span>
+                        <span>FastAPI</span>
+                        <span>React</span>
                     </div>
                 </article>
             </div>

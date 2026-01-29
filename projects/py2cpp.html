@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Py2Cpp | Thomas Vu</title>
+    <meta name="description" content="Py2Cpp - A Python to C++ transpiler for competitive programming. Converts Python to C++ using AST parsing and type inference.">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Py2Cpp | Thomas Vu">
+    <meta property="og:description" content="Python to C++ transpiler for competitive programming.">
+    <meta property="og:url" content="https://thomastienn.github.io/portfolio/projects/py2cpp">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../index.html" class="nav-logo">TV</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+                <h1>Py2Cpp</h1>
+                <p class="project-detail-tagline">Python to C++ Transpiler for Competitive Programming</p>
+                <div class="project-detail-links">
+                    <a href="https://python2cpp.vercel.app" target="_blank" class="link-btn link-btn-primary">Live Demo</a>
+                    <a href="https://github.com/Thomastienn/python2cpp" target="_blank" class="link-btn">View Code</a>
+                </div>
+            </header>
+
+            <section class="project-detail-demo">
+                <h2>Demo</h2>
+                <div class="video-container">
+                    <video controls playsinline>
+                        <source src="../assets/videos/py2cpp-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Overview</h2>
+                <p>
+                    Py2Cpp converts Python code to C++ using AST-based parsing. I built it because 
+                    I sometimes write solutions in Python first but need C++ for faster execution times 
+                    on online judges. Instead of manually rewriting, this tool automates the translation.
+                </p>
+                <p>
+                    It handles common Python patterns like loops, conditionals, list operations, and 
+                    built-in functions. When the AST-based approach can't handle something, it falls 
+                    back to an LLM.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>How It Works</h2>
+                <ul class="feature-list">
+                    <li>
+                        <strong>Parsing</strong>
+                        <p>Python's ast module parses source code into an abstract syntax tree. The transpiler walks this tree and converts each node to equivalent C++ code.</p>
+                    </li>
+                    <li>
+                        <strong>Type Inference</strong>
+                        <p>A linter pass infers variable types (int, string, vector, map, etc.) by analyzing assignments and function calls. This determines the C++ type declarations.</p>
+                    </li>
+                    <li>
+                        <strong>Built-in Translations</strong>
+                        <p>Common Python functions get mapped to C++ equivalents: print() to cout, len() to .size(), range() to for loops, input() to a helper template, etc.</p>
+                    </li>
+                    <li>
+                        <strong>Template Helpers</strong>
+                        <p>Some Python behaviors need helper functions in C++. These templates (for slicing, mapping, etc.) are only included when used.</p>
+                    </li>
+                    <li>
+                        <strong>LLM Fallback</strong>
+                        <p>When the deterministic transpiler fails, Gemini API attempts the conversion. There's also an endpoint to fix compilation errors.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Architecture</h2>
+                <div class="tech-details">
+                    <div class="tech-detail-item">
+                        <h3>Transpiler Core</h3>
+                        <p>ExprParser processes statements (assignments, loops, conditionals). ReprVisitor converts expressions to C++ strings. Linter tracks variable types and scopes.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Web Backend</h3>
+                        <p>FastAPI server with rate limiting (30 req/min), input size limits, and AST complexity checks to prevent abuse.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Frontend</h3>
+                        <p>React app with Monaco Editor for code input. Shows Python on the left, generated C++ on the right.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>CLI</h3>
+                        <p>Can also run locally via command line: python main.py input.py</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Limitations</h2>
+                <p>
+                    Doesn't support classes, decorators, generators, or complex Python features. 
+                    Type inference can fail on ambiguous cases. Designed for simple, procedural code.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Technology Stack</h2>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>AST</span>
+                    <span>FastAPI</span>
+                    <span>React</span>
+                    <span>TypeScript</span>
+                    <span>Monaco Editor</span>
+                    <span>Docker</span>
+                    <span>Gemini API</span>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Thomas Vu</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
