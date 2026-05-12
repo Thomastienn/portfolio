@@ -653,6 +653,70 @@ main {
     margin-bottom: 16px;
 }
 
+.project-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.metric-item {
+    padding: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-bg);
+}
+
+.metric-value {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 24px;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.metric-label {
+    display: block;
+    font-size: 12px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.runtime-map {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.runtime-node {
+    padding: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: var(--color-bg);
+}
+
+.runtime-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.runtime-node p {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.runtime-arrow {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    color: var(--color-text-muted);
+}
+
 .feature-list {
     list-style: none;
     display: flex;
@@ -717,6 +781,10 @@ main {
     }
 
     .tech-details {
+        grid-template-columns: 1fr;
+    }
+
+    .project-metrics {
         grid-template-columns: 1fr;
     }
 }

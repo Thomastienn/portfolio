@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Game Platform | Thomas Vu</title>
+    <meta name="description" content="Multiplayer Game Platform - A JavaFX LAN game platform with accounts, lobbies, matchmaking, chat, bots, Elo, and post-game results.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Multiplayer Game Platform | Thomas Vu">
+    <meta property="og:description" content="JavaFX multiplayer game platform built for a large software engineering team project.">
+    <meta property="og:url" content="https://thomastienn.github.io/portfolio/projects/game-platform">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../index.html" class="nav-logo">TV</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+                <h1>Multiplayer Game Platform</h1>
+                <p class="project-detail-tagline">JavaFX LAN Game Platform Built With a Large Software Engineering Team</p>
+                <div class="project-detail-links">
+                    <a href="https://github.com/Thomastienn/seng300-platform" target="_blank" class="link-btn">View Code</a>
+                </div>
+            </header>
+
+            <section class="project-detail-section">
+                <h2>Overview</h2>
+                <p>
+                    This was a large SENG 300 team project: a Java desktop platform for playing
+                    Tic Tac Toe and Connect Four over a LAN. The app includes account login, persistent
+                    sessions, public and private lobbies, matchmaking, chat, bot opponents, Elo ratings,
+                    leaderboards, draw and resign flows, and post-game results.
+                </p>
+                <p>
+                    The project used JavaFX as the desktop shell and loaded HTML/CSS screens through WebView.
+                    Java bridge classes expose backend behavior to JavaScript, while a TCP client/server
+                    layer keeps lobbies and games synchronized between players.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>My Contribution</h2>
+                <div class="project-metrics">
+                    <div class="metric-item">
+                        <span class="metric-value">Integration</span>
+                        <span class="metric-label">my focus</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">Team</span>
+                        <span class="metric-label">class project</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">LAN</span>
+                        <span class="metric-label">networked app</span>
+                    </div>
+                </div>
+                <p>
+                    My commits were mostly around integration across module boundaries. I connected UI
+                    screens to the Java backend, wired lobby and game state through the network layer,
+                    handled session tokens, added lobby synchronization and disconnect behavior, and helped
+                    bring independently built validation, game, networking, and UI work into one runnable app.
+                </p>
+                <p>
+                    This was not a solo project. Classmates contributed major pieces across the UI, validation,
+                    game rules, bot behavior, tests, documentation, and feature polish. The final app worked
+                    because those pieces came together.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Runtime Architecture</h2>
+                <div class="runtime-map">
+                    <div class="runtime-node">
+                        <span class="runtime-label">JavaFX Shell</span>
+                        <p>MainApp opens a WebView and loads HTML/CSS screens from resources.</p>
+                    </div>
+                    <div class="runtime-arrow">→</div>
+                    <div class="runtime-node">
+                        <span class="runtime-label">Bridge Layer</span>
+                        <p>Bridge classes attach Java objects to window so JavaScript can call backend actions.</p>
+                    </div>
+                    <div class="runtime-arrow">→</div>
+                    <div class="runtime-node">
+                        <span class="runtime-label">Client Router</span>
+                        <p>Feature handlers send typed Payload requests and receive typed responses.</p>
+                    </div>
+                    <div class="runtime-arrow">→</div>
+                    <div class="runtime-node">
+                        <span class="runtime-label">TCP Server</span>
+                        <p>Server accepts clients, routes protected requests, broadcasts pushable lobby/game updates.</p>
+                    </div>
+                    <div class="runtime-arrow">→</div>
+                    <div class="runtime-node">
+                        <span class="runtime-label">Platform Core</span>
+                        <p>Lobby, matchmaking, game, bot, Elo, player, and validation classes own the domain logic.</p>
+                    </div>
+                    <div class="runtime-arrow">→</div>
+                    <div class="runtime-node">
+                        <span class="runtime-label">Serialized Stores</span>
+                        <p>File-backed database classes persist accounts, sessions, lobbies, and leaderboard data.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>How It Works</h2>
+                <ul class="feature-list">
+                    <li>
+                        <strong>JavaFX WebView Shell</strong>
+                        <p>MainApp loads HTML screens into a WebView. Bridge classes attach Java objects to the browser window so JavaScript can call into Java for login, lobby, matchmaking, game, leaderboard, and results actions.</p>
+                    </li>
+                    <li>
+                        <strong>LAN Networking</strong>
+                        <p>The client discovers servers with UDP broadcast or subnet scan, then connects over TCP. Requests and responses are serialized payload objects routed through client and server handler registries.</p>
+                    </li>
+                    <li>
+                        <strong>Lobby and Match Flow</strong>
+                        <p>LobbyManager tracks join codes, public and private rooms, ready state, player membership, bot players, and disconnect cleanup. Matchmaking pairs players by game type and Elo rating.</p>
+                    </li>
+                    <li>
+                        <strong>Game State Sync</strong>
+                        <p>Tic Tac Toe and Connect Four share a GameAbstract base with board state, piece ownership, current player tracking, move results, draw offers, resigns, and win validation.</p>
+                    </li>
+                    <li>
+                        <strong>Bots and Ratings</strong>
+                        <p>Bots use difficulty-scaled forced move detection and a possibility tree with alpha-beta pruning. Post-game logic computes Elo deltas and routes players to the results screen.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Architecture</h2>
+                <div class="tech-details">
+                    <div class="tech-detail-item">
+                        <h3>Bridge Layer</h3>
+                        <p>GameBridge, LobbyBridge, AccountBridge, MatchmakingBridge, and related classes translate UI actions into typed backend calls and push backend updates back into JavaScript.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Network Layer</h3>
+                        <p>Client and Server use Java sockets, object streams, routers, and typed payload classes to move protected requests and pushable responses across the LAN.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Platform Core</h3>
+                        <p>LobbyRoom, LobbyManager, MatchmakingManager, Player, Bot, EloCalculator, and game classes define the shared domain state used by the UI and server handlers.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Persistence and Tests</h3>
+                        <p>Serializable file-backed database classes store accounts, sessions, lobbies, and leaderboard data. JUnit tests cover database behavior, networking, lobbies, bridges, validation, and bots.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Team Credit</h2>
+                <p>
+                    Shoutout to the classmates who built and debugged this with me. The project had many
+                    moving parts, and the UI, validation, game logic, bot logic, tests, and documentation
+                    all depended on different people getting their parts working and then helping integrate
+                    them under deadline pressure.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Limitations</h2>
+                <p>
+                    This was a course project optimized for local demos and team integration. Persistence is
+                    file-based serialization rather than a production database, networking is LAN-oriented,
+                    and the JavaFX WebView UI is desktop-only.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Technology Stack</h2>
+                <div class="project-tech">
+                    <span>Java 25</span>
+                    <span>JavaFX</span>
+                    <span>WebView</span>
+                    <span>Maven</span>
+                    <span>TCP Sockets</span>
+                    <span>UDP Discovery</span>
+                    <span>JUnit 5</span>
+                    <span>Mockito</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Thomas Vu</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
