@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Engine Contributions | Thomas Vu</title>
+    <meta name="description" content="Small contributions to a friend's C++ physics simulation tool, focused on octree and BVH acceleration structures.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Physics Engine Contributions | Thomas Vu">
+    <meta property="og:description" content="Octree and BVH optimization work in a collaborative C++ physics engine.">
+    <meta property="og:url" content="https://thomastienn.github.io/portfolio/projects/physics-engine">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../index.html" class="nav-logo">TV</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <a href="../index.html#projects" class="back-link">&larr; Back to Projects</a>
+                <h1>Physics Engine Contributions</h1>
+                <p class="project-detail-tagline">Small Optimization Contributions to a Friend's C++ Physics Simulator</p>
+                <div class="project-detail-links">
+                    <a href="https://github.com/jacobbehnam/custom-physics-engine" target="_blank" class="link-btn">View Code</a>
+                </div>
+            </header>
+
+            <section class="project-detail-section">
+                <h2>Overview</h2>
+                <p>
+                    This is Jacob Behnam's custom physics simulation and visualization tool. It combines a
+                    C++ physics core with a Qt/OpenGL editor-style interface for building scenes, running
+                    simulations, inspecting objects, saving and loading scenes, and visualizing motion.
+                </p>
+                <p>
+                    My contribution was scoped and mostly focused on optimization experiments. I helped add
+                    spatial acceleration structures for gravity, thermal proximity, and collision broad-phase
+                    checks, plus smaller support work around thermal properties, snapshots, debug visuals,
+                    scene presets, and Linux setup.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>My Contribution</h2>
+                <div class="project-metrics">
+                    <div class="metric-item">
+                        <span class="metric-value">Support</span>
+                        <span class="metric-label">contributor role</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">Octree</span>
+                        <span class="metric-label">n-body queries</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">BVH</span>
+                        <span class="metric-label">collision broad phase</span>
+                    </div>
+                </div>
+                <p>
+                    The main code I would point to is the octree in <span class="inline-code">src/physics/spatial/Octree.*</span>
+                    and the collision BVH in <span class="inline-code">src/physics/spatial/BVH.*</span>. The physics loop builds
+                    those structures each step, uses the octree for approximate pairwise gravity and heat
+                    transfer, and uses the BVH to filter collision candidates before narrow-phase checks.
+                </p>
+                <p>
+                    I also made smaller contributions around temperature fields in the physics model and UI,
+                    snapshot interpolation for smoother rendering, debug overlays, sample scene/preset work,
+                    and Linux build/run scripts.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>How It Works</h2>
+                <ul class="feature-list">
+                    <li>
+                        <strong>Octree for N-Body Work</strong>
+                        <p>The octree groups bodies by position and stores aggregate mass, center of mass, effective thermal area, and emission. Distant nodes can be approximated instead of checking every body pair directly.</p>
+                    </li>
+                    <li>
+                        <strong>BVH for Collision Broad Phase</strong>
+                        <p>The BVH builds AABB bounds around collidable bodies, recursively splits by the widest centroid axis, and returns possible collision pairs for the narrow-phase collider logic.</p>
+                    </li>
+                    <li>
+                        <strong>Physics Loop Integration</strong>
+                        <p>PhysicsSystem rebuilds the octree during each advance step, applies global and n-body gravity, updates thermal properties, records snapshots, then runs BVH-filtered collision checks.</p>
+                    </li>
+                    <li>
+                        <strong>Editor and Debug Support</strong>
+                        <p>The app includes scene hierarchy and inspector panels, object labels/focus tools, path and force visualizations, collider debug views, snapshot history, and sample scenes.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Technology Stack</h2>
+                <div class="project-tech">
+                    <span>C++20</span>
+                    <span>Qt 6</span>
+                    <span>OpenGL</span>
+                    <span>GLM</span>
+                    <span>CMake</span>
+                    <span>BVH</span>
+                    <span>Octree</span>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Thomas Vu</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
