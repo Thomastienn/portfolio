@@ -105,31 +105,41 @@
                 </div>
             </div>
             <div class="hero-visual" aria-hidden="true">
-                <div class="visual-panel hero-profile-visual">
-                    <div class="profile-card">
-                        <span class="profile-kicker">Focus</span>
-                        <span class="profile-title">Build useful software</span>
-                        <p>Developer tools, ML/NLP, systems, and competitive programming.</p>
-                    </div>
-                    <div class="profile-map">
-                        <svg viewBox="0 0 320 210">
-                            <rect x="26" y="30" width="120" height="64" rx="14" />
-                            <rect x="174" y="30" width="120" height="64" rx="14" />
-                            <rect x="26" y="122" width="120" height="58" rx="14" />
-                            <rect x="174" y="122" width="120" height="58" rx="14" />
-                            <path d="M146 62h28M86 94v28M234 94v28M146 151h28" />
-                            <circle cx="160" cy="105" r="16" />
-                            <path d="M153 105h14M160 98v14" />
-                        </svg>
-                        <span style="--x: 42px; --y: 48px;">tools</span>
-                        <span style="--x: 190px; --y: 48px;">ML/NLP</span>
-                        <span style="--x: 42px; --y: 139px;">systems</span>
-                        <span style="--x: 190px; --y: 139px;">CP</span>
-                    </div>
-                    <div class="profile-footer">
-                        <span>learn deeply</span>
-                        <span>ship cleanly</span>
-                    </div>
+                <div class="visual-panel hero-desk-visual">
+                    <svg class="desk-scene" viewBox="0 0 380 360">
+                        <rect class="desk-window" x="30" y="34" width="220" height="154" rx="16" />
+                        <circle cx="48" cy="52" r="3" />
+                        <circle cx="62" cy="52" r="3" />
+                        <circle cx="76" cy="52" r="3" />
+                        <path class="desk-code strong" d="M50 78h64M50 96h116M70 114h82M70 132h122M50 150h74" />
+                        <path class="desk-code faint" d="M164 78h44M196 96h22M168 150h54" />
+                        <text x="50" y="174">editor</text>
+
+                        <rect class="desk-window" x="52" y="210" width="170" height="86" rx="14" />
+                        <path class="desk-code strong" d="M72 238h54M72 256h92M72 274h62" />
+                        <text x="72" y="224">terminal</text>
+
+                        <rect class="desk-note" x="268" y="40" width="82" height="92" rx="14" />
+                        <path d="M286 66h42M286 82h30M286 98h48" />
+                        <text x="309" y="119">notes</text>
+
+                        <circle cx="292" cy="184" r="13" />
+                        <circle cx="266" cy="226" r="11" />
+                        <circle cx="320" cy="226" r="11" />
+                        <path d="M286 195l-15 21M299 195l15 21" />
+                        <text x="292" y="252">AST</text>
+
+                        <circle class="dot" cx="278" cy="286" r="4" />
+                        <circle class="dot" cx="302" cy="304" r="4" />
+                        <circle class="dot" cx="334" cy="292" r="4" />
+                        <circle class="dot" cx="352" cy="316" r="4" />
+                        <path class="desk-link" d="M278 286c24-18 45-14 74 30" />
+                        <text x="314" y="340">embeddings</text>
+
+                        <rect class="desk-card" x="168" y="302" width="84" height="34" rx="10" />
+                        <path d="M184 319h36M228 319h10" />
+                        <text x="210" y="352">usable UI</text>
+                    </svg>
                 </div>
             </div>
         </section>
@@ -209,21 +219,25 @@
             <div class="research-grid">
                 <article class="research-card">
                     <div class="card-visual slides-agent-visual" aria-hidden="true">
-                        <svg viewBox="0 0 360 118">
-                            <rect x="18" y="26" width="58" height="70" rx="8" />
-                            <path d="M32 44h28M32 57h22M32 70h28" />
-                            <circle cx="144" cy="60" r="26" />
-                            <path d="M134 58h20M144 48v20" />
-                            <path d="M76 60h38M170 60h32" />
-                            <rect x="206" y="28" width="62" height="48" rx="8" />
-                            <rect x="224" y="42" width="62" height="48" rx="8" />
-                            <rect x="242" y="56" width="62" height="48" rx="8" />
-                            <path d="M258 74h30M258 86h20" />
-                            <path d="M128 94c20 16 58 16 84 1" />
+                        <svg viewBox="0 0 360 126">
+                            <rect x="16" y="24" width="62" height="76" rx="8" />
+                            <path d="M30 43h28M30 56h34M30 69h24M30 82h30" />
+                            <text x="47" y="111">doc</text>
+                            <path d="M82 62h34" />
+                            <rect x="118" y="24" width="86" height="76" rx="10" />
+                            <circle cx="140" cy="48" r="8" />
+                            <path d="M156 44h30M156 56h22M136 72h48M136 84h34" />
+                            <text x="161" y="111">agent plan</text>
+                            <path d="M208 62h32" />
+                            <rect x="244" y="30" width="52" height="40" rx="7" />
+                            <rect x="258" y="42" width="52" height="40" rx="7" />
+                            <rect x="272" y="54" width="52" height="40" rx="7" />
+                            <path d="M286 70h24M286 80h16" />
+                            <text x="286" y="111">slides</text>
                         </svg>
-                        <span>document</span>
-                        <span>agent</span>
-                        <span>slides</span>
+                        <span>input</span>
+                        <span>agent workflow</span>
+                        <span>presentation</span>
                     </div>
                     <div class="research-header">
                         <span class="research-type">Software Engineering Research</span>
@@ -349,19 +363,17 @@
                 <article class="project-card" data-href="projects/algebra-solver.html">
                     <div class="card-visual ast-visual" aria-hidden="true">
                         <svg viewBox="0 0 360 126">
-                            <circle cx="180" cy="25" r="17" />
-                            <circle cx="126" cy="70" r="15" />
-                            <circle cx="234" cy="70" r="15" />
-                            <circle cx="90" cy="106" r="13" />
-                            <circle cx="162" cy="106" r="13" />
-                            <circle cx="234" cy="106" r="13" />
-                            <path d="M168 38l-31 22M192 38l31 22M119 82l-21 15M133 83l21 14M234 85v8" />
-                            <text x="180" y="30">=</text>
-                            <text x="126" y="75">+</text>
-                            <text x="234" y="75">12</text>
-                            <text x="90" y="111">x</text>
-                            <text x="162" y="111">y</text>
-                            <text x="234" y="111">k</text>
+                            <circle cx="180" cy="22" r="16" />
+                            <circle cx="122" cy="66" r="15" />
+                            <circle cx="238" cy="66" r="15" />
+                            <circle cx="86" cy="106" r="13" />
+                            <circle cx="158" cy="106" r="13" />
+                            <path d="M167 34l-34 22M193 34l34 22M115 78l-21 18M130 79l21 17" />
+                            <text x="180" y="27">=</text>
+                            <text x="122" y="71">+</text>
+                            <text x="238" y="71">12</text>
+                            <text x="86" y="111">x</text>
+                            <text x="158" y="111">y</text>
                         </svg>
                         <span>parse</span>
                         <span>simplify</span>
