@@ -23,6 +23,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <svg class="svg-sprite" aria-hidden="true" focusable="false">
+        <symbol id="icon-code" viewBox="0 0 24 24">
+            <path d="m18 16 4-4-4-4" />
+            <path d="m6 8-4 4 4 4" />
+            <path d="m14.5 4-5 16" />
+        </symbol>
+        <symbol id="icon-stack" viewBox="0 0 24 24">
+            <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+            <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+            <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+        </symbol>
+        <symbol id="icon-tool" viewBox="0 0 24 24">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+        </symbol>
+        <symbol id="icon-brain" viewBox="0 0 24 24">
+            <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+            <path d="M9 13a4.5 4.5 0 0 0 3-4" />
+            <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+            <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+            <path d="M6 18a4 4 0 0 1-1.967-.516" />
+            <path d="M12 13h4" />
+            <path d="M12 18h6a2 2 0 0 1 2 2v1" />
+            <path d="M12 8h8" />
+            <path d="M16 8V5a2 2 0 0 1 2-2" />
+            <circle cx="16" cy="13" r=".5" />
+            <circle cx="18" cy="3" r=".5" />
+            <circle cx="20" cy="21" r=".5" />
+            <circle cx="20" cy="8" r=".5" />
+        </symbol>
+        <symbol id="icon-cloud" viewBox="0 0 24 24">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
+        </symbol>
+        <symbol id="icon-network" viewBox="0 0 24 24">
+            <rect x="16" y="16" width="6" height="6" rx="1" />
+            <rect x="2" y="16" width="6" height="6" rx="1" />
+            <rect x="9" y="2" width="6" height="6" rx="1" />
+            <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+            <path d="M12 12V8" />
+        </symbol>
+        <symbol id="icon-trophy" viewBox="0 0 24 24">
+            <path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978" />
+            <path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978" />
+            <path d="M18 9h1.5a1 1 0 0 0 0-5H18" />
+            <path d="M4 22h16" />
+            <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z" />
+            <path d="M6 9H4.5a1 1 0 0 1 0-5H6" />
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+        </symbol>
+    </svg>
     <nav class="nav">
         <div class="nav-content">
             <a href="#" class="nav-logo">TV</a>
@@ -52,6 +104,34 @@
                     <a href="mailto:thomastien123@gmail.com" class="link-btn link-btn-primary">Get in Touch</a>
                 </div>
             </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="visual-panel hero-profile-visual">
+                    <div class="profile-card">
+                        <span class="profile-kicker">Focus</span>
+                        <span class="profile-title">Build useful software</span>
+                        <p>Developer tools, ML/NLP, systems, and competitive programming.</p>
+                    </div>
+                    <div class="profile-map">
+                        <svg viewBox="0 0 320 210">
+                            <rect x="26" y="30" width="120" height="64" rx="14" />
+                            <rect x="174" y="30" width="120" height="64" rx="14" />
+                            <rect x="26" y="122" width="120" height="58" rx="14" />
+                            <rect x="174" y="122" width="120" height="58" rx="14" />
+                            <path d="M146 62h28M86 94v28M234 94v28M146 151h28" />
+                            <circle cx="160" cy="105" r="16" />
+                            <path d="M153 105h14M160 98v14" />
+                        </svg>
+                        <span style="--x: 42px; --y: 48px;">tools</span>
+                        <span style="--x: 190px; --y: 48px;">ML/NLP</span>
+                        <span style="--x: 42px; --y: 139px;">systems</span>
+                        <span style="--x: 190px; --y: 139px;">CP</span>
+                    </div>
+                    <div class="profile-footer">
+                        <span>learn deeply</span>
+                        <span>ship cleanly</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="about" class="section">
@@ -70,14 +150,17 @@
                 </div>
                 <div class="skills-grid">
                     <div class="skill-category">
+                        <span class="icon-badge"><svg><use href="#icon-code"></use></svg></span>
                         <h3>Languages</h3>
                         <p>Python, C++, TypeScript, Java, SQL, Bash</p>
                     </div>
                     <div class="skill-category">
+                        <span class="icon-badge"><svg><use href="#icon-stack"></use></svg></span>
                         <h3>Frameworks</h3>
                         <p>React, Next.js, FastAPI, LangGraph, PyTorch</p>
                     </div>
                     <div class="skill-category">
+                        <span class="icon-badge"><svg><use href="#icon-tool"></use></svg></span>
                         <h3>Tools</h3>
                         <p>Docker, AWS, Git, spaCy, Transformers</p>
                     </div>
@@ -92,7 +175,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Undergraduate Researcher</h3>
+                            <h3><span class="title-icon"><svg><use href="#icon-brain"></use></svg></span>Undergraduate Researcher</h3>
                             <span class="timeline-date">Oct 2025 — Present</span>
                         </div>
                         <p class="timeline-company">University of Calgary · Machine Learning & NLP</p>
@@ -107,7 +190,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3>Undergraduate Researcher</h3>
+                            <h3><span class="title-icon"><svg><use href="#icon-cloud"></use></svg></span>Undergraduate Researcher</h3>
                             <span class="timeline-date">May 2025 — Aug 2025</span>
                         </div>
                         <p class="timeline-company">Vision Research Lab, University of Calgary · Software Engineering</p>
@@ -125,6 +208,23 @@
             <h2 class="section-title">Research</h2>
             <div class="research-grid">
                 <article class="research-card">
+                    <div class="card-visual slides-agent-visual" aria-hidden="true">
+                        <svg viewBox="0 0 360 118">
+                            <rect x="18" y="26" width="58" height="70" rx="8" />
+                            <path d="M32 44h28M32 57h22M32 70h28" />
+                            <circle cx="144" cy="60" r="26" />
+                            <path d="M134 58h20M144 48v20" />
+                            <path d="M76 60h38M170 60h32" />
+                            <rect x="206" y="28" width="62" height="48" rx="8" />
+                            <rect x="224" y="42" width="62" height="48" rx="8" />
+                            <rect x="242" y="56" width="62" height="48" rx="8" />
+                            <path d="M258 74h30M258 86h20" />
+                            <path d="M128 94c20 16 58 16 84 1" />
+                        </svg>
+                        <span>document</span>
+                        <span>agent</span>
+                        <span>slides</span>
+                    </div>
                     <div class="research-header">
                         <span class="research-type">Software Engineering Research</span>
                     </div>
@@ -155,6 +255,24 @@
                 </article>
 
                 <article class="research-card">
+                    <div class="card-visual embedding-visual" aria-hidden="true">
+                        <svg viewBox="0 0 360 118">
+                            <path d="M28 90c36-34 70-18 106-42 42-28 76 12 116-6 28-12 50-10 82 12" />
+                            <circle cx="54" cy="76" r="5" />
+                            <circle cx="82" cy="58" r="4" />
+                            <circle cx="119" cy="70" r="5" />
+                            <circle cx="160" cy="38" r="5" />
+                            <circle cx="195" cy="55" r="4" />
+                            <circle cx="226" cy="72" r="5" />
+                            <circle cx="268" cy="40" r="5" />
+                            <circle cx="306" cy="62" r="4" />
+                            <path d="M42 26h30M42 36h46M42 46h22" />
+                            <path d="M270 86h42M282 96h30" />
+                        </svg>
+                        <span>features</span>
+                        <span>pairs</span>
+                        <span>ranking</span>
+                    </div>
                     <div class="research-header">
                         <span class="research-type">NLP Research</span>
                     </div>
@@ -187,6 +305,22 @@
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <article class="project-card" data-href="projects/py2cpp.html">
+                    <div class="card-visual transpiler-visual" aria-hidden="true">
+                        <svg viewBox="0 0 360 126">
+                            <rect x="16" y="28" width="92" height="70" rx="8" />
+                            <path d="M30 48h42M30 62h30M30 76h52" />
+                            <circle cx="180" cy="42" r="15" />
+                            <circle cx="150" cy="82" r="13" />
+                            <circle cx="210" cy="82" r="13" />
+                            <path d="M173 54l-15 17M187 54l15 17" />
+                            <path d="M108 63h38M224 63h28" />
+                            <rect x="252" y="28" width="92" height="70" rx="8" />
+                            <path d="M266 48h46M266 62h34M266 76h54" />
+                        </svg>
+                        <span>Python</span>
+                        <span>AST</span>
+                        <span>C++</span>
+                    </div>
                     <div class="project-header">
                         <h3>Py2Cpp</h3>
                         <div class="project-links">
@@ -213,6 +347,26 @@
                 </article>
 
                 <article class="project-card" data-href="projects/algebra-solver.html">
+                    <div class="card-visual ast-visual" aria-hidden="true">
+                        <svg viewBox="0 0 360 126">
+                            <circle cx="180" cy="25" r="17" />
+                            <circle cx="126" cy="70" r="15" />
+                            <circle cx="234" cy="70" r="15" />
+                            <circle cx="90" cy="106" r="13" />
+                            <circle cx="162" cy="106" r="13" />
+                            <circle cx="234" cy="106" r="13" />
+                            <path d="M168 38l-31 22M192 38l31 22M119 82l-21 15M133 83l21 14M234 85v8" />
+                            <text x="180" y="30">=</text>
+                            <text x="126" y="75">+</text>
+                            <text x="234" y="75">12</text>
+                            <text x="90" y="111">x</text>
+                            <text x="162" y="111">y</text>
+                            <text x="234" y="111">k</text>
+                        </svg>
+                        <span>parse</span>
+                        <span>simplify</span>
+                        <span>solve</span>
+                    </div>
                     <div class="project-header">
                         <h3>Algebra Solver</h3>
                         <div class="project-links">
@@ -239,6 +393,22 @@
                 </article>
 
                 <article class="project-card" data-href="projects/game-platform.html">
+                    <div class="card-visual platform-visual" aria-hidden="true">
+                        <svg viewBox="0 0 360 126">
+                            <rect x="18" y="22" width="324" height="82" rx="12" />
+                            <rect x="34" y="38" width="72" height="50" rx="8" />
+                            <rect x="122" y="38" width="72" height="50" rx="8" />
+                            <rect x="210" y="38" width="72" height="50" rx="8" />
+                            <path d="M298 40h24M298 52h18M298 64h24M298 76h14" />
+                            <circle cx="58" cy="56" r="7" />
+                            <circle cx="146" cy="56" r="7" />
+                            <circle cx="234" cy="56" r="7" />
+                            <path d="M48 76h22M136 76h24M224 76h26" />
+                        </svg>
+                        <span>lobbies</span>
+                        <span>players</span>
+                        <span>games</span>
+                    </div>
                     <div class="project-header">
                         <h3>Multiplayer Game Platform</h3>
                         <div class="project-links">
@@ -264,6 +434,22 @@
                 </article>
 
                 <article class="project-card" data-href="projects/physics-engine.html">
+                    <div class="card-visual physics-visual" aria-hidden="true">
+                        <svg viewBox="0 0 360 126">
+                            <rect x="32" y="18" width="134" height="90" rx="8" />
+                            <path d="M99 18v90M32 63h134M66 63v45M132 18v45" />
+                            <circle cx="74" cy="43" r="6" />
+                            <circle cx="130" cy="82" r="8" />
+                            <path d="M188 86c42-52 92-52 130 0" />
+                            <circle cx="218" cy="72" r="8" />
+                            <circle cx="284" cy="54" r="11" />
+                            <path d="M226 69l48-12" />
+                            <path d="M206 94h92M206 103h56" />
+                        </svg>
+                        <span>octree</span>
+                        <span>BVH</span>
+                        <span>motion</span>
+                    </div>
                     <div class="project-header">
                         <h3>Physics Engine Contributions</h3>
                         <div class="project-links">
@@ -294,6 +480,7 @@
             <h2 class="section-title">Awards</h2>
             <div class="awards-list">
                 <div class="award-item">
+                    <span class="icon-badge award-icon"><svg><use href="#icon-trophy"></use></svg></span>
                     <div class="award-info">
                         <h3>Calgary Collegiate Programming Contest 2025</h3>
                         <p>Division 2 — Third Place</p>
@@ -301,6 +488,7 @@
                     <span class="award-date">March 2025</span>
                 </div>
                 <div class="award-item">
+                    <span class="icon-badge award-icon"><svg><use href="#icon-trophy"></use></svg></span>
                     <div class="award-info">
                         <h3>Calgary First Year Contest 2025</h3>
                         <p>Winner</p>
@@ -308,6 +496,7 @@
                     <span class="award-date">February 2025</span>
                 </div>
                 <div class="award-item">
+                    <span class="icon-badge award-icon"><svg><use href="#icon-trophy"></use></svg></span>
                     <div class="award-info">
                         <h3>Dean's List</h3>
                         <p>Academic Excellence 2024-2025</p>
@@ -324,14 +513,17 @@
             </p>
             <div class="contact-links">
                 <a href="mailto:thomastien123@gmail.com" class="contact-link">
+                    <span class="icon-badge contact-icon"><svg><use href="#icon-mail"></use></svg></span>
                     <span class="contact-label">Email</span>
                     <span>thomastien123@gmail.com</span>
                 </a>
                 <a href="https://github.com/Thomastienn" target="_blank" class="contact-link">
+                    <span class="icon-badge contact-icon"><svg><use href="#icon-code"></use></svg></span>
                     <span class="contact-label">GitHub</span>
                     <span>github.com/Thomastienn</span>
                 </a>
                 <a href="https://linkedin.com/in/tienthomasvu" target="_blank" class="contact-link">
+                    <span class="icon-badge contact-icon"><svg><use href="#icon-network"></use></svg></span>
                     <span class="contact-label">LinkedIn</span>
                     <span>linkedin.com/in/tienthomasvu</span>
                 </a>
