@@ -74,6 +74,27 @@
             <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
             <rect x="2" y="4" width="20" height="16" rx="2" />
         </symbol>
+        <symbol id="icon-search" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+        </symbol>
+        <symbol id="icon-calculator" viewBox="0 0 24 24">
+            <rect x="4" y="2" width="16" height="20" rx="2" />
+            <path d="M8 6h8" />
+            <path d="M8 10h.01M12 10h.01M16 10h.01" />
+            <path d="M8 14h.01M12 14h.01M16 14h.01" />
+            <path d="M8 18h.01M12 18h.01M16 18h.01" />
+        </symbol>
+        <symbol id="icon-gamepad" viewBox="0 0 24 24">
+            <path d="M6 12h4M8 10v4" />
+            <path d="M15 13h.01M18 11h.01" />
+            <path d="M17.32 5H6.68a4 4 0 0 0-3.98 3.59l-.7 6.86A3 3 0 0 0 4.99 19h.26a3 3 0 0 0 2.12-.88L9.5 16h5l2.13 2.12a3 3 0 0 0 2.12.88h.26A3 3 0 0 0 22 15.45l-.7-6.86A4 4 0 0 0 17.32 5Z" />
+        </symbol>
+        <symbol id="icon-orbit" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3" />
+            <path d="M16.24 7.76c2.83 2.83 4.24 5.99 3.16 7.07-1.08 1.08-4.24-.33-7.07-3.16S8.09 5.68 9.17 4.6c1.08-1.08 4.24.33 7.07 3.16Z" />
+            <path d="M7.76 16.24c-2.83-2.83-4.24-5.99-3.16-7.07 1.08-1.08 4.24.33 7.07 3.16s4.24 5.99 3.16 7.07c-1.08 1.08-4.24-.33-7.07-3.16Z" />
+        </symbol>
     </svg>
     <nav class="nav">
         <div class="nav-content">
@@ -105,42 +126,11 @@
                 </div>
             </div>
             <div class="hero-visual" aria-hidden="true">
-                <div class="visual-panel hero-desk-visual">
-                    <svg class="desk-scene" viewBox="0 0 380 360">
-                        <rect class="desk-window" x="30" y="34" width="220" height="154" rx="16" />
-                        <circle cx="48" cy="52" r="3" />
-                        <circle cx="62" cy="52" r="3" />
-                        <circle cx="76" cy="52" r="3" />
-                        <path class="desk-code strong" d="M50 78h64M50 96h116M70 114h82M70 132h122M50 150h74" />
-                        <path class="desk-code faint" d="M164 78h44M196 96h22M168 150h54" />
-                        <text x="50" y="174">editor</text>
-
-                        <rect class="desk-window" x="52" y="210" width="170" height="86" rx="14" />
-                        <path class="desk-code strong" d="M72 238h54M72 256h92M72 274h62" />
-                        <text x="72" y="224">terminal</text>
-
-                        <rect class="desk-note" x="268" y="40" width="82" height="92" rx="14" />
-                        <path d="M286 66h42M286 82h30M286 98h48" />
-                        <text x="309" y="119">notes</text>
-
-                        <circle cx="292" cy="184" r="13" />
-                        <circle cx="266" cy="226" r="11" />
-                        <circle cx="320" cy="226" r="11" />
-                        <path d="M286 195l-15 21M299 195l15 21" />
-                        <text x="292" y="252">AST</text>
-
-                        <circle class="dot" cx="278" cy="286" r="4" />
-                        <circle class="dot" cx="302" cy="304" r="4" />
-                        <circle class="dot" cx="334" cy="292" r="4" />
-                        <circle class="dot" cx="352" cy="316" r="4" />
-                        <path class="desk-link" d="M278 286c24-18 45-14 74 30" />
-                        <text x="314" y="340">embeddings</text>
-
-                        <rect class="desk-card" x="168" y="302" width="84" height="34" rx="10" />
-                        <path d="M184 319h36M228 319h10" />
-                        <text x="210" y="352">usable UI</text>
-                    </svg>
-                </div>
+                <svg class="hero-transform-visual" viewBox="0 0 220 180">
+                    <path d="M84 54 44 90l40 36" />
+                    <path d="m136 54 40 36-40 36" />
+                    <path d="m122 42-24 96" />
+                </svg>
             </div>
         </section>
 
@@ -219,25 +209,7 @@
             <div class="research-grid">
                 <article class="research-card">
                     <div class="card-visual slides-agent-visual" aria-hidden="true">
-                        <svg viewBox="0 0 360 126">
-                            <rect x="16" y="24" width="62" height="76" rx="8" />
-                            <path d="M30 43h28M30 56h34M30 69h24M30 82h30" />
-                            <text x="47" y="111">doc</text>
-                            <path d="M82 62h34" />
-                            <rect x="118" y="24" width="86" height="76" rx="10" />
-                            <circle cx="140" cy="48" r="8" />
-                            <path d="M156 44h30M156 56h22M136 72h48M136 84h34" />
-                            <text x="161" y="111">agent plan</text>
-                            <path d="M208 62h32" />
-                            <rect x="244" y="30" width="52" height="40" rx="7" />
-                            <rect x="258" y="42" width="52" height="40" rx="7" />
-                            <rect x="272" y="54" width="52" height="40" rx="7" />
-                            <path d="M286 70h24M286 80h16" />
-                            <text x="286" y="111">slides</text>
-                        </svg>
-                        <span>input</span>
-                        <span>agent workflow</span>
-                        <span>presentation</span>
+                        <span class="icon-badge card-icon"><svg><use href="#icon-cloud"></use></svg></span>
                     </div>
                     <div class="research-header">
                         <span class="research-type">Software Engineering Research</span>
@@ -270,22 +242,7 @@
 
                 <article class="research-card">
                     <div class="card-visual embedding-visual" aria-hidden="true">
-                        <svg viewBox="0 0 360 118">
-                            <path d="M28 90c36-34 70-18 106-42 42-28 76 12 116-6 28-12 50-10 82 12" />
-                            <circle cx="54" cy="76" r="5" />
-                            <circle cx="82" cy="58" r="4" />
-                            <circle cx="119" cy="70" r="5" />
-                            <circle cx="160" cy="38" r="5" />
-                            <circle cx="195" cy="55" r="4" />
-                            <circle cx="226" cy="72" r="5" />
-                            <circle cx="268" cy="40" r="5" />
-                            <circle cx="306" cy="62" r="4" />
-                            <path d="M42 26h30M42 36h46M42 46h22" />
-                            <path d="M270 86h42M282 96h30" />
-                        </svg>
-                        <span>features</span>
-                        <span>pairs</span>
-                        <span>ranking</span>
+                        <span class="icon-badge card-icon"><svg><use href="#icon-search"></use></svg></span>
                     </div>
                     <div class="research-header">
                         <span class="research-type">NLP Research</span>
@@ -320,20 +277,7 @@
             <div class="projects-grid">
                 <article class="project-card" data-href="projects/py2cpp.html">
                     <div class="card-visual transpiler-visual" aria-hidden="true">
-                        <svg viewBox="0 0 360 126">
-                            <rect x="16" y="28" width="92" height="70" rx="8" />
-                            <path d="M30 48h42M30 62h30M30 76h52" />
-                            <circle cx="180" cy="42" r="15" />
-                            <circle cx="150" cy="82" r="13" />
-                            <circle cx="210" cy="82" r="13" />
-                            <path d="M173 54l-15 17M187 54l15 17" />
-                            <path d="M108 63h38M224 63h28" />
-                            <rect x="252" y="28" width="92" height="70" rx="8" />
-                            <path d="M266 48h46M266 62h34M266 76h54" />
-                        </svg>
-                        <span>Python</span>
-                        <span>AST</span>
-                        <span>C++</span>
+                        <span class="icon-badge card-icon"><svg><use href="#icon-code"></use></svg></span>
                     </div>
                     <div class="project-header">
                         <h3>Py2Cpp</h3>
@@ -362,22 +306,7 @@
 
                 <article class="project-card" data-href="projects/algebra-solver.html">
                     <div class="card-visual ast-visual" aria-hidden="true">
-                        <svg viewBox="0 0 360 126">
-                            <circle cx="180" cy="22" r="16" />
-                            <circle cx="122" cy="66" r="15" />
-                            <circle cx="238" cy="66" r="15" />
-                            <circle cx="86" cy="106" r="13" />
-                            <circle cx="158" cy="106" r="13" />
-                            <path d="M167 34l-34 22M193 34l34 22M115 78l-21 18M130 79l21 17" />
-                            <text x="180" y="27">=</text>
-                            <text x="122" y="71">+</text>
-                            <text x="238" y="71">12</text>
-                            <text x="86" y="111">x</text>
-                            <text x="158" y="111">y</text>
-                        </svg>
-                        <span>parse</span>
-                        <span>simplify</span>
-                        <span>solve</span>
+                        <span class="icon-badge card-icon"><svg><use href="#icon-calculator"></use></svg></span>
                     </div>
                     <div class="project-header">
                         <h3>Algebra Solver</h3>
@@ -406,20 +335,7 @@
 
                 <article class="project-card" data-href="projects/game-platform.html">
                     <div class="card-visual platform-visual" aria-hidden="true">
-                        <svg viewBox="0 0 360 126">
-                            <rect x="18" y="22" width="324" height="82" rx="12" />
-                            <rect x="34" y="38" width="72" height="50" rx="8" />
-                            <rect x="122" y="38" width="72" height="50" rx="8" />
-                            <rect x="210" y="38" width="72" height="50" rx="8" />
-                            <path d="M298 40h24M298 52h18M298 64h24M298 76h14" />
-                            <circle cx="58" cy="56" r="7" />
-                            <circle cx="146" cy="56" r="7" />
-                            <circle cx="234" cy="56" r="7" />
-                            <path d="M48 76h22M136 76h24M224 76h26" />
-                        </svg>
-                        <span>lobbies</span>
-                        <span>players</span>
-                        <span>games</span>
+                        <span class="icon-badge card-icon"><svg><use href="#icon-gamepad"></use></svg></span>
                     </div>
                     <div class="project-header">
                         <h3>Multiplayer Game Platform</h3>
@@ -447,20 +363,7 @@
 
                 <article class="project-card" data-href="projects/physics-engine.html">
                     <div class="card-visual physics-visual" aria-hidden="true">
-                        <svg viewBox="0 0 360 126">
-                            <rect x="32" y="18" width="134" height="90" rx="8" />
-                            <path d="M99 18v90M32 63h134M66 63v45M132 18v45" />
-                            <circle cx="74" cy="43" r="6" />
-                            <circle cx="130" cy="82" r="8" />
-                            <path d="M188 86c42-52 92-52 130 0" />
-                            <circle cx="218" cy="72" r="8" />
-                            <circle cx="284" cy="54" r="11" />
-                            <path d="M226 69l48-12" />
-                            <path d="M206 94h92M206 103h56" />
-                        </svg>
-                        <span>octree</span>
-                        <span>BVH</span>
-                        <span>motion</span>
+                        <span class="icon-badge card-icon"><svg><use href="#icon-orbit"></use></svg></span>
                     </div>
                     <div class="project-header">
                         <h3>Physics Engine Contributions</h3>

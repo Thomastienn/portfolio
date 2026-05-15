@@ -126,74 +126,21 @@ main {
 
 .hero-visual {
     position: relative;
-}
-
-.visual-panel {
-    position: relative;
-    overflow: hidden;
-    min-height: 390px;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-}
-
-.visual-panel::after {
-    display: none;
-}
-
-.hero-desk-visual {
     display: grid;
     place-items: center;
-    min-height: 390px;
+    min-height: 260px;
 }
 
-.desk-scene {
+.hero-transform-visual {
     width: 100%;
-    max-width: 360px;
+    max-width: 220px;
+    height: auto;
     fill: none;
-    stroke: rgba(255, 255, 255, 0.42);
-    stroke-width: 1.45;
+    stroke: rgba(255, 255, 255, 0.44);
+    stroke-width: 4;
     stroke-linecap: round;
     stroke-linejoin: round;
-}
-
-.desk-scene text {
-    fill: var(--color-text-muted);
-    stroke: none;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.03em;
-}
-
-.desk-window,
-.desk-note,
-.desk-card {
-    fill: #0c0c0c;
-    stroke: rgba(255, 255, 255, 0.24);
-}
-
-.desk-note {
-    stroke-dasharray: 3 4;
-}
-
-.desk-code {
-    stroke-width: 2;
-}
-
-.desk-code.strong {
-    stroke: rgba(255, 255, 255, 0.56);
-}
-
-.desk-code.faint,
-.desk-link {
-    stroke: rgba(255, 255, 255, 0.24);
-}
-
-.dot {
-    fill: #101010;
-    stroke: rgba(255, 255, 255, 0.58);
+    overflow: visible;
 }
 
 .hero-greeting {
@@ -269,20 +216,21 @@ main {
 .section-title {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 1.5px;
+    gap: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--color-text-muted);
-    margin-bottom: 32px;
+    color: var(--color-text);
+    margin-bottom: 36px;
 }
 
 .section-title::before {
     content: '';
-    width: 28px;
-    height: 1px;
-    background: var(--color-text-muted);
+    width: 34px;
+    height: 2px;
+    background: var(--color-text);
+    opacity: 0.78;
 }
 
 .icon-badge {
@@ -568,59 +516,12 @@ main {
 .card-visual {
     position: relative;
     z-index: 1;
-    display: grid;
-    min-height: 138px;
-    margin-bottom: 22px;
-    padding: 10px 12px 38px;
-    border: 1px solid var(--color-border);
-    border-radius: 14px;
-    background: #111;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
-.card-visual svg {
-    width: 100%;
-    height: 96px;
-    fill: none;
-    stroke: rgba(255, 255, 255, 0.45);
-    stroke-width: 1.45;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.card-visual text {
-    fill: var(--color-text-secondary);
-    stroke: none;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    text-anchor: middle;
-    dominant-baseline: middle;
-}
-
-.card-visual > span {
-    position: absolute;
-    bottom: 12px;
-    padding: 4px 8px;
-    border: 1px solid var(--color-border);
-    border-radius: 999px;
+.card-icon {
     color: var(--color-text-secondary);
-    background: #0b0b0b;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-}
-
-.card-visual > span:nth-of-type(1) {
-    left: 14px;
-}
-
-.card-visual > span:nth-of-type(2) {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.card-visual > span:nth-of-type(3) {
-    right: 14px;
 }
 
 /* Research Section */
@@ -1084,12 +985,12 @@ main {
         font-size: 18px;
     }
 
-    .visual-panel {
-        min-height: 330px;
+    .hero-visual {
+        min-height: 180px;
     }
 
-    .hero-desk-visual {
-        min-height: 330px;
+    .hero-transform-visual {
+        max-width: 170px;
     }
 
     .skills-grid {
@@ -1133,7 +1034,7 @@ main {
         transform: translateY(-2px);
     }
 
-    .visual-panel {
+    .hero-transform-visual {
         animation: panel-rise 0.8s ease both;
     }
 }
