@@ -1,82 +1,62 @@
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+// Smooth scroll for in-page nav
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+        const id = anchor.getAttribute('href');
+        if (!id || id === '#') return;
+        const target = document.querySelector(id);
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
 
-// Subtle fade-in animation on scroll
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
+// Reveal-on-scroll
+const reveals = document.querySelectorAll('.section');
+reveals.forEach((el) => el.classList.add('reveal'));
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
+const io = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                io.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.08 }
+);
 
-// Observe sections for fade-in
-document.querySelectorAll('.section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-});
+reveals.forEach((el) => io.observe(el));
 
-// Add visible class styles
-const style = document.createElement('style');
-style.textContent = `
-    .section.visible {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
-`;
-document.head.appendChild(style);
-
-// Active nav link highlighting
+// Active nav-link highlighting
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 
-window.addEventListener('scroll', () => {
+function syncActiveNav() {
     let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop - 200) {
+    const offset = 220;
+    sections.forEach((section) => {
+        if (window.scrollY >= section.offsetTop - offset) {
             current = section.getAttribute('id');
         }
     });
-
-    navLinks.forEach(link => {
-        link.style.color = '';
-        if (link.getAttribute('href') === `#${current}`) {
-            link.style.color = '#ebebeb';
-        }
+    navLinks.forEach((link) => {
+        link.classList.toggle(
+            'is-active',
+            link.getAttribute('href') === `#${current}`
+        );
     });
-});
+}
+
+window.addEventListener('scroll', syncActiveNav, { passive: true });
+syncActiveNav();
 
 // Clickable project cards
-document.querySelectorAll('.project-card[data-href]').forEach(card => {
+document.querySelectorAll('.project-card[data-href]').forEach((card) => {
     card.addEventListener('click', (e) => {
-        // Don't navigate if clicking on a link inside the card
-        if (e.target.tagName === 'A') return;
-        
+        if (e.target.closest('a')) return;
         const href = card.getAttribute('data-href');
-        if (href) {
-            window.location.href = href;
-        }
+        if (href) window.location.href = href;
     });
 });

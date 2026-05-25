@@ -3,102 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas Vu | Software Developer</title>
+    <title>Thomas Vu — Software Developer</title>
     <meta name="description" content="CS student at University of Calgary. Building compilers, ML systems, and developer tools. Research in NLP and software engineering.">
-    
-    <!-- Open Graph / Social Sharing -->
+
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Thomas Vu | Software Developer">
+    <meta property="og:title" content="Thomas Vu — Software Developer">
     <meta property="og:description" content="CS student at University of Calgary. Building compilers, ML systems, and developer tools.">
     <meta property="og:url" content="https://thomastienn.github.io/portfolio">
-    
-    <!-- Twitter -->
+
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Thomas Vu | Software Developer">
+    <meta name="twitter:title" content="Thomas Vu — Software Developer">
     <meta name="twitter:description" content="CS student at University of Calgary. Building compilers, ML systems, and developer tools.">
-    
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <svg class="svg-sprite" aria-hidden="true" focusable="false">
-        <symbol id="icon-code" viewBox="0 0 24 24">
-            <path d="m18 16 4-4-4-4" />
-            <path d="m6 8-4 4 4 4" />
-            <path d="m14.5 4-5 16" />
-        </symbol>
-        <symbol id="icon-stack" viewBox="0 0 24 24">
-            <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
-            <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
-            <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
-        </symbol>
-        <symbol id="icon-tool" viewBox="0 0 24 24">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
-        </symbol>
-        <symbol id="icon-brain" viewBox="0 0 24 24">
-            <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
-            <path d="M9 13a4.5 4.5 0 0 0 3-4" />
-            <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
-            <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
-            <path d="M6 18a4 4 0 0 1-1.967-.516" />
-            <path d="M12 13h4" />
-            <path d="M12 18h6a2 2 0 0 1 2 2v1" />
-            <path d="M12 8h8" />
-            <path d="M16 8V5a2 2 0 0 1 2-2" />
-            <circle cx="16" cy="13" r=".5" />
-            <circle cx="18" cy="3" r=".5" />
-            <circle cx="20" cy="21" r=".5" />
-            <circle cx="20" cy="8" r=".5" />
-        </symbol>
-        <symbol id="icon-cloud" viewBox="0 0 24 24">
-            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-        </symbol>
-        <symbol id="icon-network" viewBox="0 0 24 24">
-            <rect x="16" y="16" width="6" height="6" rx="1" />
-            <rect x="2" y="16" width="6" height="6" rx="1" />
-            <rect x="9" y="2" width="6" height="6" rx="1" />
-            <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
-            <path d="M12 12V8" />
-        </symbol>
-        <symbol id="icon-trophy" viewBox="0 0 24 24">
-            <path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978" />
-            <path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978" />
-            <path d="M18 9h1.5a1 1 0 0 0 0-5H18" />
-            <path d="M4 22h16" />
-            <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z" />
-            <path d="M6 9H4.5a1 1 0 0 1 0-5H6" />
-        </symbol>
-        <symbol id="icon-mail" viewBox="0 0 24 24">
-            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-        </symbol>
-        <symbol id="icon-search" viewBox="0 0 24 24">
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-        </symbol>
-        <symbol id="icon-calculator" viewBox="0 0 24 24">
-            <rect x="4" y="2" width="16" height="20" rx="2" />
-            <path d="M8 6h8" />
-            <path d="M8 10h.01M12 10h.01M16 10h.01" />
-            <path d="M8 14h.01M12 14h.01M16 14h.01" />
-            <path d="M8 18h.01M12 18h.01M16 18h.01" />
-        </symbol>
-        <symbol id="icon-gamepad" viewBox="0 0 24 24">
-            <path d="M6 12h4M8 10v4" />
-            <path d="M15 13h.01M18 11h.01" />
-            <path d="M17.32 5H6.68a4 4 0 0 0-3.98 3.59l-.7 6.86A3 3 0 0 0 4.99 19h.26a3 3 0 0 0 2.12-.88L9.5 16h5l2.13 2.12a3 3 0 0 0 2.12.88h.26A3 3 0 0 0 22 15.45l-.7-6.86A4 4 0 0 0 17.32 5Z" />
-        </symbol>
-        <symbol id="icon-orbit" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="3" />
-            <path d="M16.24 7.76c2.83 2.83 4.24 5.99 3.16 7.07-1.08 1.08-4.24-.33-7.07-3.16S8.09 5.68 9.17 4.6c1.08-1.08 4.24.33 7.07 3.16Z" />
-            <path d="M7.76 16.24c-2.83-2.83-4.24-5.99-3.16-7.07 1.08-1.08 4.24.33 7.07 3.16s4.24 5.99 3.16 7.07c-1.08 1.08-4.24-.33-7.07-3.16Z" />
-        </symbol>
-    </svg>
     <nav class="nav">
         <div class="nav-content">
-            <a href="#" class="nav-logo">TV</a>
+            <a href="#" class="nav-logo">Thomas Vu</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -112,73 +37,79 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <p class="hero-greeting">Hi, I'm</p>
+                <p class="hero-greeting">Portfolio · 2026</p>
                 <h1 class="hero-name">Thomas Vu</h1>
-                <p class="hero-tagline">Developer tools, ML research, and problem solving</p>
+                <p class="hero-tagline">
+                    I build developer tools, ship research-grade ML systems, and like solving hard problems for their own sake.
+                </p>
                 <p class="hero-description">
-                    Second-year CS student at the University of Calgary. I build developer tools, conduct NLP research, and like solving problems in my free time.
+                    Second-year Computer Science student at the University of Calgary. NLP &amp; software engineering research, AWS-deployed agent platforms, and competitive programming on the side.
                 </p>
                 <div class="hero-links">
                     <a href="https://github.com/Thomastienn" target="_blank" class="link-btn">GitHub</a>
                     <a href="https://linkedin.com/in/tienthomasvu" target="_blank" class="link-btn">LinkedIn</a>
-                    <a href="resume.pdf" download class="link-btn">Resume</a>
-                    <a href="mailto:thomastien123@gmail.com" class="link-btn link-btn-primary">Get in Touch</a>
+                    <a href="resume.pdf" download class="link-btn">Résumé</a>
+                    <a href="mailto:thomastien123@gmail.com" class="link-btn link-btn-primary">Contact</a>
                 </div>
             </div>
-            <div class="hero-visual" aria-hidden="true">
-                <svg class="hero-transform-visual" viewBox="0 0 220 180">
-                    <path d="M84 54 44 90l40 36" />
-                    <path d="m136 54 40 36-40 36" />
-                    <path d="m122 42-24 96" />
-                </svg>
-            </div>
+            <aside class="hero-visual" aria-hidden="true">
+                <div class="meta-row">
+                    <span>Based in</span>
+                    <span>Calgary, AB</span>
+                </div>
+                <div class="meta-row">
+                    <span>Currently</span>
+                    <span>UCalgary CS · 3.7 GPA</span>
+                </div>
+                <div class="meta-row">
+                    <span>Focus</span>
+                    <span>ML / NLP · Dev tools</span>
+                </div>
+                <div class="meta-row">
+                    <span>Status</span>
+                    <span>Open to roles</span>
+                </div>
+            </aside>
         </section>
 
         <section id="about" class="section">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title" data-num="01">About</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a second-year Computer Science student at the <strong>University of Calgary</strong>, 
-                        maintaining a 3.7 GPA and recognized on the Dean's List for academic excellence.
+                        I'm a second-year Computer Science student at the <strong>University of Calgary</strong>, maintaining a 3.7 GPA and recognized on the Dean's List for academic excellence.
                     </p>
                     <p>
-                        My interests span from building developer tools and transpilers to conducting research 
-                        in machine learning and NLP. I enjoy solving complex problems and shipping products 
-                        that people can actually use.
+                        My interests span from building developer tools and transpilers to conducting research in machine learning and NLP. I enjoy shipping products people actually use — and breaking hard problems down until they're boring.
                     </p>
                 </div>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <span class="icon-badge"><svg><use href="#icon-code"></use></svg></span>
                         <h3>Languages</h3>
-                        <p>Python, C++, TypeScript, Java, SQL, Bash</p>
+                        <p>Python · C++ · TypeScript · Java · SQL · Bash</p>
                     </div>
                     <div class="skill-category">
-                        <span class="icon-badge"><svg><use href="#icon-stack"></use></svg></span>
                         <h3>Frameworks</h3>
-                        <p>React, Next.js, FastAPI, LangGraph, PyTorch</p>
+                        <p>React · Next.js · FastAPI · LangGraph · PyTorch</p>
                     </div>
                     <div class="skill-category">
-                        <span class="icon-badge"><svg><use href="#icon-tool"></use></svg></span>
                         <h3>Tools</h3>
-                        <p>Docker, AWS, Git, spaCy, Transformers</p>
+                        <p>Docker · AWS · Git · spaCy · Transformers</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="experience" class="section">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title" data-num="02">Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <span class="timeline-date">Oct 2025 — Present</span>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3><span class="title-icon"><svg><use href="#icon-brain"></use></svg></span>Undergraduate Researcher</h3>
-                            <span class="timeline-date">Oct 2025 — Present</span>
+                            <h3>Undergraduate Researcher</h3>
                         </div>
-                        <p class="timeline-company">University of Calgary · Machine Learning & NLP</p>
+                        <p class="timeline-company">University of Calgary · Machine Learning &amp; NLP</p>
                         <ul class="timeline-details">
                             <li>Built NLP pipelines to assess text complexity in German literature using Transformers, GPT, and spaCy</li>
                             <li>Used PCA and t-SNE to visualize feature space and explore clustering with KNN</li>
@@ -187,11 +118,10 @@
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <span class="timeline-date">May 2025 — Aug 2025</span>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3><span class="title-icon"><svg><use href="#icon-cloud"></use></svg></span>Undergraduate Researcher</h3>
-                            <span class="timeline-date">May 2025 — Aug 2025</span>
+                            <h3>Undergraduate Researcher</h3>
                         </div>
                         <p class="timeline-company">Vision Research Lab, University of Calgary · Software Engineering</p>
                         <ul class="timeline-details">
@@ -205,20 +135,16 @@
         </section>
 
         <section id="research" class="section">
-            <h2 class="section-title">Research</h2>
+            <h2 class="section-title" data-num="03">Research</h2>
             <div class="research-grid">
-                <article class="research-card">
-                    <div class="card-visual slides-agent-visual" aria-hidden="true">
-                        <span class="icon-badge card-icon"><svg><use href="#icon-cloud"></use></svg></span>
-                    </div>
+                <article class="research-card" data-idx="R.01">
                     <div class="research-header">
                         <span class="research-type">Software Engineering Research</span>
+                        <h3>SmartSuite</h3>
                     </div>
-                    <h3>SmartSuite</h3>
                     <p class="research-org">Vision Research Lab, University of Calgary</p>
                     <p class="research-description">
-                        A suite of AI-driven office tools deployed on AWS. Features intelligent document processing, 
-                        presentation generation, and conversational AI with LangGraph-based agents.
+                        A suite of AI-driven office tools deployed on AWS. Features intelligent document processing, presentation generation, and conversational AI with LangGraph-based agents.
                     </p>
                     <ul class="research-highlights">
                         <li>Document-to-presentation pipeline with multi-step agentic workflow</li>
@@ -226,32 +152,18 @@
                         <li>LanceDB vector search for semantic document retrieval</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Python</span>
-                        <span>AWS Lambda</span>
-                        <span>AWS CDK</span>
-                        <span>DynamoDB</span>
-                        <span>S3</span>
-                        <span>Docker</span>
-                        <span>LangGraph</span>
-                        <span>LanceDB</span>
-                        <span>OpenAI</span>
-                        <span>React</span>
-                        <span>TypeScript</span>
+                        <span>Python</span><span>AWS Lambda</span><span>AWS CDK</span><span>DynamoDB</span><span>S3</span><span>Docker</span><span>LangGraph</span><span>LanceDB</span><span>OpenAI</span><span>React</span><span>TypeScript</span>
                     </div>
                 </article>
 
-                <article class="research-card">
-                    <div class="card-visual embedding-visual" aria-hidden="true">
-                        <span class="icon-badge card-icon"><svg><use href="#icon-search"></use></svg></span>
-                    </div>
+                <article class="research-card" data-idx="R.02">
                     <div class="research-header">
                         <span class="research-type">NLP Research</span>
+                        <h3>Text Complexity Scoring</h3>
                     </div>
-                    <h3>Text Complexity Scoring</h3>
                     <p class="research-org">University of Calgary</p>
                     <p class="research-description">
-                        Self-supervised methods for scoring text complexity in German sentences. 
-                        Developing unsupervised ranking models without requiring manual labels.
+                        Self-supervised methods for scoring text complexity in German sentences. Developing unsupervised ranking models without requiring manual labels.
                     </p>
                     <ul class="research-highlights">
                         <li>38 linguistic features: lexical, syntactic, POS ratios, GPT-2 perplexity</li>
@@ -259,26 +171,16 @@
                         <li>Achieved 88% pairwise accuracy with 0.91 Spearman correlation</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Python</span>
-                        <span>PyTorch</span>
-                        <span>Transformers</span>
-                        <span>spaCy</span>
-                        <span>BERT</span>
-                        <span>GPT-2</span>
-                        <span>scikit-learn</span>
-                        <span>NumPy</span>
+                        <span>Python</span><span>PyTorch</span><span>Transformers</span><span>spaCy</span><span>BERT</span><span>GPT-2</span><span>scikit-learn</span><span>NumPy</span>
                     </div>
                 </article>
             </div>
         </section>
 
         <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title" data-num="04">Projects</h2>
             <div class="projects-grid">
-                <article class="project-card" data-href="projects/py2cpp.html">
-                    <div class="card-visual transpiler-visual" aria-hidden="true">
-                        <span class="icon-badge card-icon"><svg><use href="#icon-code"></use></svg></span>
-                    </div>
+                <article class="project-card" data-href="projects/py2cpp.html" data-idx="P.01">
                     <div class="project-header">
                         <h3>Py2Cpp</h3>
                         <div class="project-links">
@@ -287,8 +189,7 @@
                         </div>
                     </div>
                     <p class="project-description">
-                        Python to C++ transpiler for competitive programming. Parses Python into an AST, 
-                        infers types, and generates equivalent C++ code.
+                        Python to C++ transpiler for competitive programming. Parses Python into an AST, infers types, and generates equivalent C++ code.
                     </p>
                     <ul class="project-highlights">
                         <li>AST-based parsing with type inference for variable declarations</li>
@@ -296,18 +197,11 @@
                         <li>Web interface with Monaco Editor, plus CLI support</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Python</span>
-                        <span>AST</span>
-                        <span>FastAPI</span>
-                        <span>React</span>
-                        <span>TypeScript</span>
+                        <span>Python</span><span>AST</span><span>FastAPI</span><span>React</span><span>TypeScript</span>
                     </div>
                 </article>
 
-                <article class="project-card" data-href="projects/algebra-solver.html">
-                    <div class="card-visual ast-visual" aria-hidden="true">
-                        <span class="icon-badge card-icon"><svg><use href="#icon-calculator"></use></svg></span>
-                    </div>
+                <article class="project-card" data-href="projects/algebra-solver.html" data-idx="P.02">
                     <div class="project-header">
                         <h3>Algebra Solver</h3>
                         <div class="project-links">
@@ -316,8 +210,7 @@
                         </div>
                     </div>
                     <p class="project-description">
-                        Symbolic algebra system that solves systems of linear equations. 
-                        Built from scratch in C++ with a web frontend.
+                        Symbolic algebra system that solves systems of linear equations. Built from scratch in C++ with a web frontend.
                     </p>
                     <ul class="project-highlights">
                         <li>Custom lexer and parser building expression trees</li>
@@ -325,18 +218,11 @@
                         <li>C++ core exposed to Python via pybind11</li>
                     </ul>
                     <div class="project-tech">
-                        <span>C++</span>
-                        <span>CMake</span>
-                        <span>pybind11</span>
-                        <span>FastAPI</span>
-                        <span>React</span>
+                        <span>C++</span><span>CMake</span><span>pybind11</span><span>FastAPI</span><span>React</span>
                     </div>
                 </article>
 
-                <article class="project-card" data-href="projects/game-platform.html">
-                    <div class="card-visual platform-visual" aria-hidden="true">
-                        <span class="icon-badge card-icon"><svg><use href="#icon-gamepad"></use></svg></span>
-                    </div>
+                <article class="project-card" data-href="projects/game-platform.html" data-idx="P.03">
                     <div class="project-header">
                         <h3>Multiplayer Game Platform</h3>
                         <div class="project-links">
@@ -344,8 +230,7 @@
                         </div>
                     </div>
                     <p class="project-description">
-                        JavaFX multiplayer desktop platform built with a large software engineering class team.
-                        Supports accounts, lobbies, matchmaking, chat, Tic Tac Toe, Connect Four, bots, Elo, and post-game results.
+                        JavaFX multiplayer desktop platform built with a large software engineering class team. Supports accounts, lobbies, matchmaking, chat, Tic Tac Toe, Connect Four, bots, Elo, and post-game results.
                     </p>
                     <ul class="project-highlights">
                         <li>Substantial integration work across UI, networking, lobbies, and game flow</li>
@@ -353,18 +238,11 @@
                         <li>Team-built project with classmates owning major UI, validation, game, bot, and testing pieces</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Java</span>
-                        <span>JavaFX</span>
-                        <span>Maven</span>
-                        <span>TCP/UDP</span>
-                        <span>JUnit</span>
+                        <span>Java</span><span>JavaFX</span><span>Maven</span><span>TCP/UDP</span><span>JUnit</span>
                     </div>
                 </article>
 
-                <article class="project-card" data-href="projects/physics-engine.html">
-                    <div class="card-visual physics-visual" aria-hidden="true">
-                        <span class="icon-badge card-icon"><svg><use href="#icon-orbit"></use></svg></span>
-                    </div>
+                <article class="project-card" data-href="projects/physics-engine.html" data-idx="P.04">
                     <div class="project-header">
                         <h3>Physics Engine Contributions</h3>
                         <div class="project-links">
@@ -372,8 +250,7 @@
                         </div>
                     </div>
                     <p class="project-description">
-                        Small contributions to a friend's C++ physics simulation and visualization tool.
-                        My main focus was spatial acceleration work, not ownership of the whole engine.
+                        Small contributions to a friend's C++ physics simulation and visualization tool. My main focus was spatial acceleration work, not ownership of the whole engine.
                     </p>
                     <ul class="project-highlights">
                         <li>Added octree-based acceleration for n-body gravity and thermal proximity queries</li>
@@ -381,64 +258,54 @@
                         <li>Helped with smaller thermal, snapshot, debug, and Linux setup pieces</li>
                     </ul>
                     <div class="project-tech">
-                        <span>C++20</span>
-                        <span>Qt</span>
-                        <span>OpenGL</span>
-                        <span>GLM</span>
-                        <span>CMake</span>
+                        <span>C++20</span><span>Qt</span><span>OpenGL</span><span>GLM</span><span>CMake</span>
                     </div>
                 </article>
             </div>
         </section>
 
         <section id="awards" class="section">
-            <h2 class="section-title">Awards</h2>
+            <h2 class="section-title" data-num="05">Awards</h2>
             <div class="awards-list">
-                <div class="award-item">
-                    <span class="icon-badge award-icon"><svg><use href="#icon-trophy"></use></svg></span>
+                <div class="award-item" data-idx="A.01">
                     <div class="award-info">
                         <h3>Calgary Collegiate Programming Contest 2025</h3>
                         <p>Division 2 — Third Place</p>
                     </div>
                     <span class="award-date">March 2025</span>
                 </div>
-                <div class="award-item">
-                    <span class="icon-badge award-icon"><svg><use href="#icon-trophy"></use></svg></span>
+                <div class="award-item" data-idx="A.02">
                     <div class="award-info">
                         <h3>Calgary First Year Contest 2025</h3>
                         <p>Winner</p>
                     </div>
                     <span class="award-date">February 2025</span>
                 </div>
-                <div class="award-item">
-                    <span class="icon-badge award-icon"><svg><use href="#icon-trophy"></use></svg></span>
+                <div class="award-item" data-idx="A.03">
                     <div class="award-info">
                         <h3>Dean's List</h3>
-                        <p>Academic Excellence 2024-2025</p>
+                        <p>Academic Excellence 2024–2025</p>
                     </div>
-                    <span class="award-date">2024-2025</span>
+                    <span class="award-date">2024 — 2025</span>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section section-contact">
-            <h2 class="section-title">Get in Touch</h2>
+            <h2 class="section-title" data-num="06">Contact</h2>
             <p class="contact-text">
-                I'm always open to discussing new opportunities, collaborations, or just chatting about interesting problems.
+                Always open to discussing new opportunities, collaborations, or just chatting about interesting problems.
             </p>
             <div class="contact-links">
                 <a href="mailto:thomastien123@gmail.com" class="contact-link">
-                    <span class="icon-badge contact-icon"><svg><use href="#icon-mail"></use></svg></span>
                     <span class="contact-label">Email</span>
                     <span>thomastien123@gmail.com</span>
                 </a>
                 <a href="https://github.com/Thomastienn" target="_blank" class="contact-link">
-                    <span class="icon-badge contact-icon"><svg><use href="#icon-code"></use></svg></span>
                     <span class="contact-label">GitHub</span>
                     <span>github.com/Thomastienn</span>
                 </a>
                 <a href="https://linkedin.com/in/tienthomasvu" target="_blank" class="contact-link">
-                    <span class="icon-badge contact-icon"><svg><use href="#icon-network"></use></svg></span>
                     <span class="contact-label">LinkedIn</span>
                     <span>linkedin.com/in/tienthomasvu</span>
                 </a>
