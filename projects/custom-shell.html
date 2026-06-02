@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Shell | Thomas Vu</title>
+    <meta name="description" content="A Rust Unix-style shell with custom parsing, raw terminal input, pipelines, redirects, background jobs, shell variables, history, and tab completion.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Custom Shell | Thomas Vu">
+    <meta property="og:description" content="Rust shell project focused on parsing, process management, stdio routing, terminal input, jobs, and completion.">
+    <meta property="og:url" content="https://thomastienn.github.io/portfolio/projects/custom-shell">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="../index.html" class="nav-logo">Thomas Vu</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#research">Research</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <header class="project-detail-header">
+                <a href="../index.html#projects" class="back-link">← Index</a>
+                <h1>Custom Shell</h1>
+                <p class="project-detail-tagline">Rust Shell with Custom Parsing, Terminal Editing, and Process Control</p>
+                <div class="project-detail-links">
+                    <a href="https://github.com/Thomastienn/custom-shell" target="_blank" class="link-btn">View Code</a>
+                </div>
+            </header>
+
+            <section class="project-detail-section">
+                <h2>Overview</h2>
+                <p>
+                    Custom Shell is a Rust implementation of a Unix-style command shell. It handles the core pieces that make a shell feel real: parsing commands, routing stdin and stdout, launching external programs, running builtins, tracking background jobs, and keeping an interactive terminal input loop responsive.
+                </p>
+                <p>
+                    The project is not presented as a complete production shell. The valuable part is the systems work: turning raw user input into structured commands, passing execution state through a dispatcher, and coordinating child processes with terminal behavior.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Key Pieces</h2>
+                <div class="project-metrics">
+                    <div class="metric-item">
+                        <span class="metric-value">Parser</span>
+                        <span class="metric-label">command grammar</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">Jobs</span>
+                        <span class="metric-label">background process state</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">Raw TTY</span>
+                        <span class="metric-label">interactive input</span>
+                    </div>
+                </div>
+                <p>
+                    The tokenizer recognizes words, quotes, escapes, variables, pipes, redirection operators, file descriptors, and background commands. The parser turns those tokens into command structures with stdin, stdout, stderr, pipeline, and background execution metadata.
+                </p>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>How It Works</h2>
+                <ul class="feature-list">
+                    <li>
+                        <strong>Tokenizer and Parser</strong>
+                        <p>Input is split into structured tokens, then parsed into command objects that carry arguments plus stdin, stdout, stderr, pipe, redirect, and background-job information.</p>
+                    </li>
+                    <li>
+                        <strong>Terminal Input</strong>
+                        <p>The input loop uses raw terminal mode for character-level handling, history navigation, backspace rendering, Ctrl-C behavior, syntax-colored redraws, and tab completion.</p>
+                    </li>
+                    <li>
+                        <strong>Command Dispatch</strong>
+                        <p>Builtins and external commands share a common runnable interface. The dispatcher routes parsed commands, forwards pipeline output, waits for child processes, and returns shell exit state.</p>
+                    </li>
+                    <li>
+                        <strong>Pipes and Redirection</strong>
+                        <p>Stdio helpers convert parsed input and output targets into process handles, files, append targets, inherited streams, or pipe endpoints for both external commands and builtin output.</p>
+                    </li>
+                    <li>
+                        <strong>Jobs and Completion</strong>
+                        <p>Background processes are stored with job IDs and checked with nonblocking waits. Completion uses command and filesystem tries, with support for command-specific completion scripts.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Architecture</h2>
+                <div class="tech-details">
+                    <div class="tech-detail-item">
+                        <h3>Parsing Layer</h3>
+                        <p><span class="inline-code">tokenizer.rs</span> and <span class="inline-code">parser.rs</span> separate lexical concerns from command assembly, keeping execution code from handling raw strings directly.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Execution Layer</h3>
+                        <p>The runnable trait gives builtins and external commands a shared shape, while the dispatcher manages pipes, background execution, and shell exit handling.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>Interactive Layer</h3>
+                        <p><span class="inline-code">input.rs</span> owns raw-mode terminal behavior, redraws the prompt after edits, and chooses between command, filesystem, and custom completion sources.</p>
+                    </div>
+                    <div class="tech-detail-item">
+                        <h3>State Layer</h3>
+                        <p>The shell keeps command tries, filesystem completion data, background jobs, command history, completion registrations, and shell variables in one context passed through each command.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-detail-section">
+                <h2>Technology Stack</h2>
+                <div class="project-tech">
+                    <span>Rust</span>
+                    <span>crossterm</span>
+                    <span>Process Management</span>
+                    <span>Terminal I/O</span>
+                    <span>Parser</span>
+                    <span>Trie</span>
+                    <span>Stdio</span>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Thomas Vu</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
